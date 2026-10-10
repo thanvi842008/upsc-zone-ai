@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="normal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UPSC ZONE AI — Don't Just Read The Paper. Answer It.</title>
+  <meta name="description" content="AI-powered UPSC Civil Services preparation platform transforming daily editorials into exam-style MCQs, revision notes, and timed mock tests.">
+
+  <!-- Core Theme & Layout Stylesheets -->
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/cds.css">
+  <link rel="stylesheet" href="css/newspaper.css">
+  <link rel="stylesheet" href="css/practice.css">
+  <link rel="stylesheet" href="css/mocktest.css">
+  <link rel="stylesheet" href="css/journey.css">
+  <link rel="stylesheet" href="css/modals.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY MASTHEAD NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-topbar">
+        <div>
+          <span>New Delhi, India</span> • 
+          <span id="current-editorial-date">Saturday, October 10, 2026</span> • 
+          <span id="edition-masthead-tag">Morning Edition</span>
+        </div>
+        <div>
+          <span style="color: var(--accent-crimson); font-weight: 700;">Academic Demonstration Platform</span> • 
+          <span>Vol. IV, No. 289</span>
+        </div>
+      </div>
+
+      <div class="navbar-inner">
+        <a href="#hero-section" class="site-brand" aria-label="UPSC ZONE AI Home">
+          <span class="brand-title">UPSC ZONE <span>AI</span></span>
+          <span class="brand-tag">EXAM INTEL</span>
+        </a>
+
+        <nav>
+          <ul class="nav-links" id="nav-links-menu">
+            <!-- Mobile Prelims Countdown Item (inside collapsed menu) -->
+            <li class="nav-mobile-countdown-item">
+              <div class="prelims-countdown-chip mobile-chip" role="status" tabindex="0">
+                <span class="countdown-pulse-dot"></span>
+                <span class="countdown-text">PRELIMS · <strong class="countdown-days-val">--</strong> DAYS LEFT</span>
+              </div>
+            </li>
+            <li><a href="#hero-section" class="nav-link active">Home</a></li>
+            <li><a href="#cds-section" class="nav-link">Interactive CDs</a></li>
+            <li><a href="#newspaper-section" class="nav-link">Today's Paper</a></li>
+            <li><a href="#pyq-section" class="nav-link">PYQ Archive</a></li>
+            <li><a href="#notebooks-section" class="nav-link">Clippings & Notes</a></li>
+            <li><a href="#ledger-section" class="nav-link">Progress Ledger</a></li>
+            <li><a href="#mocktest-section" class="nav-link">Mock Test Press</a></li>
+            <li><a href="#journey-section" class="nav-link">Journey</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <!-- Desktop Prelims Countdown Chip -->
+          <div class="prelims-countdown-chip desktop-chip" id="prelims-countdown-chip" role="status" tabindex="0">
+            <span class="countdown-pulse-dot"></span>
+            <span class="countdown-text">PRELIMS · <strong class="countdown-days-val">--</strong> DAYS LEFT</span>
+          </div>
+
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Midnight Study Mode">
+            <span class="theme-icon"></span>
+            <span class="theme-text-label">Midnight Mode</span>
+          </button>
+          
+          <a href="#newspaper-section" class="btn btn-primary btn-sm" style="display: none; @media(min-width: 600px){display: inline-flex;}">
+            Start Practising
+          </a>
+
+          <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Open Navigation Menu">
+            ☰ MENU
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         HERO SECTION: EDITORIAL POWERHOUSE & NEWSPAPER COLLAGE
+         ======================================================================== -->
+    <section class="site-section hero-section" id="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- LEFT COLUMN: Headline & Philosophy -->
+          <div class="hero-content">
+            <div class="hero-label-badge">
+              <span class="dot"></span>
+              <span>Daily Editorial Intelligence • Union Civil Services</span>
+            </div>
+
+            <h1 class="hero-headline">
+              DON'T JUST READ THE PAPER.<br>
+              <span class="headline-climax">ANSWER IT.</span>
+            </h1>
+
+            <p class="hero-supporting">
+              Read today's news the way the examiner does.
+            </p>
+
+            <p class="hero-description">
+              Turn current affairs into exam-style questions, build sharper revision notes and practise with purpose — one headline at a time.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#newspaper-section" class="btn btn-primary">
+                Turn today's news into a question →
+              </a>
+              <a href="#journey-section" class="btn btn-secondary">
+                See the journey
+              </a>
+            </div>
+
+            <div class="hero-meta-strip">
+              <div class="meta-item">
+                <span>Disciplines:</span> <strong>Polity • Economy • Environment • History</strong>
+              </div>
+              <div class="meta-item">
+                <span>Method:</span> <strong>Headline-to-MCQ Synthesis</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Museum-Grade Uploaded Collage Display -->
+          <div class="hero-visual-wrapper">
+            <div class="hero-art-frame">
+              <span class="paper-clip-tag">EDITORIAL ARCHIVE</span>
+              <img 
+                src="assets/hero-collage.png" 
+                alt="UPSC ZONE AI Hero Editorial Collage featuring Supreme Court dome, Constitution of India, and historical newspaper clippings" 
+                class="hero-art-img"
+                loading="eager"
+              >
+              <div class="art-caption-strip">
+                <span>ARCHITECTURAL COLLAGE • ARCHIVE PLATE III</span>
+                <span class="plate-number">NO. 1975-2026</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         FOUR INTERACTIVE CDS (SIGNATURE FEATURE)
+         ======================================================================== -->
+    <section class="site-section cds-section" id="cds-section">
+      <div class="container">
+        <div class="cds-header-row">
+          <div>
+            <span class="section-label">Category Interface</span>
+            <h2 class="section-title">The Four Discs of Preparation</h2>
+            <p class="section-subtitle">Tactile categories arranged for direct access. Click any disc to navigate directly to its study module.</p>
+          </div>
+          <div class="cds-instruction-badge">
+            Direct Category Navigation • Select Disc
+          </div>
+        </div>
+
+        <!-- Category Navigation Stage -->
+        <div class="cds-stage-wrapper">
+          <div class="cds-stage" id="cds-stage">
+            
+            <!-- CD 1: PYQ ARCHIVE -->
+            <div class="cd-disc-card active" data-cd-index="0" role="button" tabindex="0" aria-label="PYQ Archive CD">
+              <div class="cd-inner-disc">
+                <img src="assets/cd-pyq-light.png" alt="PYQ Archive Disc Artwork" class="cd-artwork-img">
+              </div>
+              <div class="cd-tag-label">01. PYQ Archive</div>
+            </div>
+
+            <!-- CD 2: CLIPPINGS & NOTES -->
+            <div class="cd-disc-card" data-cd-index="1" role="button" tabindex="0" aria-label="Clippings and Notes CD">
+              <div class="cd-inner-disc">
+                <img src="assets/cd-notes-light.png" alt="Clippings & Notes Disc Artwork" class="cd-artwork-img">
+              </div>
+              <div class="cd-tag-label">02. Clippings & Notes</div>
+            </div>
+
+            <!-- CD 3: PROGRESS LEDGER -->
+            <div class="cd-disc-card" data-cd-index="2" role="button" tabindex="0" aria-label="Progress Ledger CD">
+              <div class="cd-inner-disc">
+                <img src="assets/cd-ledger-light.png" alt="Progress Ledger Disc Artwork" class="cd-artwork-img">
+              </div>
+              <div class="cd-tag-label">03. Progress Ledger</div>
+            </div>
+
+            <!-- CD 4: MOCK TEST PRESS -->
+            <div class="cd-disc-card" data-cd-index="3" role="button" tabindex="0" aria-label="Mock Test Press CD">
+              <div class="cd-inner-disc">
+                <img src="assets/cd-mock-light.png" alt="Mock Test Press Disc Artwork" class="cd-artwork-img">
+              </div>
+              <div class="cd-tag-label">04. Mock Test Press</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Active Category Panel below Discs -->
+        <div class="cd-active-drawer" id="cd-active-drawer">
+          <!-- Populated dynamically by js/cds.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         GLOBAL SUBJECT SELECTOR BAR
+         ======================================================================== -->
+    <div class="container">
+      <div class="subject-filter-bar">
+        <span class="filter-label">Curriculum Focus:</span>
+        <button class="subject-btn active" data-subject="all">All Subjects</button>
+        <button class="subject-btn" data-subject="Polity">Polity (GS-II)</button>
+        <button class="subject-btn" data-subject="Economy">Economy (GS-III)</button>
+        <button class="subject-btn" data-subject="Environment">Environment (GS-III)</button>
+        <button class="subject-btn" data-subject="History">History (GS-I)</button>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+         TODAY'S PAPER: THE VINTAGE NEWSPAPER EXPERIENCE
+         (Distressed Paper Texture strictly applied here)
+         ======================================================================== -->
+    <section class="site-section newspaper-section" id="newspaper-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">The Daily Broadsheet</span>
+          <h2 class="section-title">Today's Paper</h2>
+          <p class="section-subtitle">Examine the front page. Read each dispatch, convert the headline into a high-yield question, and save key clippings.</p>
+        </div>
+
+        <!-- The Vintage Printed Sheet -->
+        <div class="newspaper-sheet">
+          <div class="newspaper-fold-line"></div>
+
+          <!-- Grand Newspaper Masthead -->
+          <div class="newspaper-masthead">
+            <div class="masthead-meta-top">
+              <span>Weather: Clear • Atmospheric Barometer 29.92</span>
+              <span>Vincit Veritas in Studio</span>
+              <span>Price: Three Annas or 15 Focused Minutes</span>
+            </div>
+
+            <h1 class="masthead-title">THE DAILY CIVILIAN</h1>
+            <div class="masthead-subtitle">The Sovereign Journal of Constitutional Current Affairs & Examination Intelligence</div>
+
+            <div class="masthead-meta-bottom">
+              <span>Vol. IV — No. 289</span>
+              <span>Saturday, October 10, 2026</span>
+              <span class="sample-content-watermark">Sample Academic Edition</span>
+            </div>
+          </div>
+
+          <!-- Lead Story Slot -->
+          <div id="newspaper-lead-container">
+            <!-- Populated dynamically by js/newspaper.js -->
+          </div>
+
+          <!-- Secondary Stories 3-Column Grid -->
+          <div class="newspaper-grid" id="newspaper-grid-container">
+            <!-- Populated dynamically by js/newspaper.js -->
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PYQ ARCHIVE & QUESTION BANK
+         ======================================================================== -->
+    <section class="site-section pyq-section" id="pyq-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">Disc 01 • PYQ Archive</span>
+          <h2 class="section-title">Previous-Year Question Bank</h2>
+          <p class="section-subtitle">20 comprehensive demo questions simulating authentic UPSC Prelims statement traps with exhaustive explanations.</p>
+        </div>
+
+        <!-- PYQ Search & Filtering Bar -->
+        <div class="pyq-controls-bar">
+          <div class="pyq-search-box">
+            <span style="font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; text-transform: uppercase;">Search:</span>
+            <input type="text" id="pyq-search-input" class="pyq-search-input" placeholder="Search by topic, article, keyword...">
+          </div>
+          <div style="font-family: var(--font-sans); font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">
+            Status: <strong>Demo Question Bank (Sourced from standard syllabi)</strong>
+          </div>
+        </div>
+
+        <!-- PYQ Questions Grid -->
+        <div class="pyq-grid" id="pyq-questions-grid">
+          <!-- Populated dynamically by js/pyq.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CLIPPINGS, REVISION NOTES & MISTAKE NOTEBOOK
+         ======================================================================== -->
+    <section class="site-section notebooks-section" id="notebooks-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">Disc 02 • Clippings & Notes</span>
+          <h2 class="section-title">Aspirant Notebooks</h2>
+          <p class="section-subtitle">Manage your preserved newspaper dispatches, curated core syllabus notes, and active conceptual mistakes.</p>
+        </div>
+
+        <!-- Tab Bar -->
+        <div class="notebook-tabs-bar">
+          <button class="notebook-tab-btn active" data-tab="clippings">
+            <span>📌 Saved Clippings</span>
+          </button>
+          <button class="notebook-tab-btn" data-tab="notes">
+            <span>📖 Curated Revision Notes</span>
+          </button>
+          <button class="notebook-tab-btn" data-tab="mistakes">
+            <span>⚠️ Mistake Notebook (Auto-Captured)</span>
+          </button>
+        </div>
+
+        <!-- Tab 1: Saved Clippings -->
+        <div class="notebook-tab-content active" id="tab-clippings">
+          <div id="clippings-list-container">
+            <!-- Populated dynamically by js/progress.js -->
+          </div>
+        </div>
+
+        <!-- Tab 2: Revision Notes -->
+        <div class="notebook-tab-content" id="tab-notes">
+          <div id="revision-notes-container">
+            <!-- Populated dynamically by js/progress.js -->
+          </div>
+        </div>
+
+        <!-- Tab 3: Mistake Notebook -->
+        <div class="notebook-tab-content" id="tab-mistakes">
+          <div id="mistakes-list-container">
+            <!-- Populated dynamically by js/progress.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PROGRESS LEDGER (REAL TELEMETRY)
+         ======================================================================== -->
+    <section class="site-section ledger-section" id="ledger-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">Disc 03 • Progress Ledger</span>
+          <h2 class="section-title">Performance Telemetry</h2>
+          <p class="section-subtitle">Inspect your actual performance statistics derived from real session practice. No synthetic progress indicators.</p>
+        </div>
+
+        <!-- Empty State Banner -->
+        <div class="empty-ledger-banner" id="ledger-empty-banner">
+          <div class="empty-ledger-icon">📋</div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.5rem;">The Ledger is Clean</h3>
+          <p style="font-family: var(--font-body); max-width: 500px; margin: 0 auto 1.5rem; color: var(--text-secondary);">
+            No questions have been attempted in this session yet. Open Today's Paper or the PYQ Archive to log your first question attempt.
+          </p>
+          <a href="#newspaper-section" class="btn btn-primary btn-sm">Answer Today's Paper →</a>
+        </div>
+
+        <!-- Dashboard Grid (Revealed when attempts exist) -->
+        <div class="ledger-dashboard-grid" id="ledger-dashboard-grid" style="display: none;">
+          
+          <!-- Circular Progress Ring Card -->
+          <div class="ledger-stat-card">
+            <span class="section-label" style="margin-bottom: 0;">Accuracy Index</span>
+            
+            <div class="progress-ring-container">
+              <svg class="progress-ring-svg" viewBox="0 0 160 160">
+                <circle class="progress-ring-bg" cx="80" cy="80" r="68"></circle>
+                <circle class="progress-ring-bar" id="progress-ring-circle" cx="80" cy="80" r="68" stroke-dasharray="427" stroke-dashoffset="427"></circle>
+              </svg>
+              <div class="progress-ring-text">
+                <span class="progress-percent-val" id="progress-percent-number">0%</span>
+                <span class="progress-percent-label">Accuracy</span>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; width: 100%; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+              <div>
+                <span style="font-family: var(--font-sans); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Total Attempted</span>
+                <div style="font-family: var(--font-display); font-size: 1.6rem; color: var(--text-primary);" id="stat-total-attempted">0</div>
+              </div>
+              <div>
+                <span style="font-family: var(--font-sans); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Stories Answered</span>
+                <div style="font-family: var(--font-display); font-size: 1.6rem; color: var(--accent-crimson);" id="stat-stories-answered">0</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subject Breakdown Card -->
+          <div class="ledger-breakdown-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-family: var(--font-display); font-size: 1.4rem;">Subject Mastery Breakdown</h3>
+              <div style="display: flex; gap: 1rem; font-family: var(--font-sans); font-size: 0.75rem;">
+                <span style="color: #137333;">Correct: <strong id="stat-correct-count">0</strong></span>
+                <span style="color: var(--accent-crimson);">Incorrect: <strong id="stat-incorrect-count">0</strong></span>
+              </div>
+            </div>
+
+            <div class="subject-bars-list" id="ledger-subject-bars">
+              <!-- Rendered dynamically by js/progress.js -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         MOCK TEST PRESS (TIMED SIMULATION)
+         ======================================================================== -->
+    <section class="site-section mocktest-section" id="mocktest-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">Disc 04 • Mock Test Press</span>
+          <h2 class="section-title">The 10-Question Test Press</h2>
+          <p class="section-subtitle">Experience actual Prelims examination conditions. 10 statement-based questions, strict 15-minute countdown clock, and negative marking.</p>
+        </div>
+
+        <div class="mocktest-container">
+          
+          <!-- State 1: Start Screen -->
+          <div class="mocktest-start-screen" id="mocktest-start-screen">
+            <h3 style="font-family: var(--font-display); font-size: 2rem;">Demo Prelims Simulation Test</h3>
+            <p style="font-family: var(--font-body); color: var(--text-secondary); font-size: 1.05rem;">
+              Test your ability to handle multiple subjects under time pressure. Every incorrect answer incurs standard UPSC negative penalty (-0.66 marks) and is automatically saved to your Mistake Notebook.
+            </p>
+
+            <div class="mocktest-features-list">
+              <div class="feature-box">
+                <strong>10</strong>
+                <span>Questions</span>
+              </div>
+              <div class="feature-box">
+                <strong>15:00</strong>
+                <span>Minutes</span>
+              </div>
+              <div class="feature-box">
+                <strong>+2 / -0.66</strong>
+                <span>Marking Scheme</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" id="start-mock-btn">
+              Begin 15-Minute Mock Test →
+            </button>
+          </div>
+
+          <!-- State 2: Active Test Interface -->
+          <div class="mocktest-active-interface" id="mocktest-active-interface">
+            <div class="mocktest-top-bar">
+              <div>
+                <span id="mock-current-qnum" style="font-family: var(--font-sans); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">
+                  Question 1 of 10
+                </span>
+                <span id="mock-q-badge" class="badge" style="margin-left: 0.5rem;">Polity</span>
+              </div>
+              
+              <div class="timer-display">
+                <span style="font-size: 0.8rem; text-transform: uppercase;">Remaining:</span>
+                <span id="mock-timer-clock">15:00</span>
+              </div>
+            </div>
+
+            <!-- Question Palette -->
+            <div class="question-palette" id="mock-question-palette">
+              <!-- Populated by js/mocktest.js -->
+            </div>
+
+            <!-- Question Display -->
+            <div class="mock-question-display">
+              <div class="question-body-text" id="mock-q-text" style="font-size: 1.1rem; line-height: 1.65;"></div>
+              <div class="options-list" id="mock-q-options"></div>
+            </div>
+
+            <!-- Footer Controls -->
+            <div class="mock-controls-footer">
+              <button class="btn btn-secondary btn-sm" id="mock-prev-btn">← Previous Question</button>
+              <div style="display: flex; gap: 0.75rem;">
+                <button class="btn btn-primary btn-sm" id="mock-next-btn">Next Question →</button>
+                <button class="btn btn-secondary btn-sm" id="mock-submit-btn" style="border-color: var(--accent-crimson); color: var(--accent-crimson);">
+                  Submit Test 🏁
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- State 3: Results Screen -->
+          <div class="mocktest-results-screen" id="mocktest-results-screen">
+            <div class="results-hero-card">
+              <span class="section-label">Test Press Concluded</span>
+              <div class="score-big-number" id="results-score-number">14.68 / 20.00</div>
+              <p style="font-family: var(--font-body); font-style: italic; color: var(--text-secondary);">
+                Results evaluated using standard UPSC Prelims scoring (+2.00 for correct, -0.66 for incorrect).
+              </p>
+
+              <div class="results-breakdown-row">
+                <div>
+                  <span style="font-family: var(--font-sans); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Accuracy</span>
+                  <div style="font-family: var(--font-display); font-size: 1.4rem;" id="results-accuracy-val">75%</div>
+                </div>
+                <div>
+                  <span style="font-family: var(--font-sans); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Correct</span>
+                  <div style="font-family: var(--font-display); font-size: 1.4rem; color: #137333;" id="results-correct-val">8</div>
+                </div>
+                <div>
+                  <span style="font-family: var(--font-sans); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Incorrect</span>
+                  <div style="font-family: var(--font-display); font-size: 1.4rem; color: var(--accent-crimson);" id="results-incorrect-val">2</div>
+                </div>
+                <div>
+                  <span style="font-family: var(--font-sans); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Time Taken</span>
+                  <div style="font-family: var(--font-display); font-size: 1.4rem;" id="results-time-val">8m 42s</div>
+                </div>
+              </div>
+
+              <div style="margin-top: 1.5rem;">
+                <button class="btn btn-primary btn-sm" id="mock-restart-btn">Take Another Mock Test ↻</button>
+              </div>
+            </div>
+
+            <!-- Detailed Question Review List -->
+            <h3 style="font-family: var(--font-display); font-size: 1.6rem; margin-top: 2rem;">Comprehensive Question Review</h3>
+            <div class="review-questions-list" id="results-review-container">
+              <!-- Populated by js/mocktest.js -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         UPSC JOURNEY (SCROLL-DRIVEN 3-STAGE TIMELINE)
+         ======================================================================== -->
+    <section class="site-section journey-section" id="journey-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">Examination Arc</span>
+          <h2 class="section-title">The Three Milestones</h2>
+          <p class="section-subtitle">A scroll-driven journey from the initial Prelims elimination filter to the final Union Public Service Commission interview board.</p>
+        </div>
+
+        <div class="journey-container">
+          <!-- Rail Line -->
+          <div class="journey-rail">
+            <div class="journey-rail-progress" id="journey-rail-progress-bar"></div>
+          </div>
+
+          <!-- STAGE 1: PRELIMS -->
+          <div class="journey-stage-item active">
+            <div class="stage-node-marker">1</div>
+            <div class="stage-card">
+              <div class="stage-header">
+                <div>
+                  <span class="badge badge-polity">Stage I • Objective Filter</span>
+                  <h3 class="stage-title">Civil Services Preliminary Examination</h3>
+                </div>
+                <span style="font-family: var(--font-sans); font-size: 0.72rem; color: var(--text-muted);">GS Paper I & CSAT Paper II</span>
+              </div>
+              <p style="font-family: var(--font-body); font-size: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                The high-stakes elimination gauntlet. 200 marks of negative-marked objective questions evaluating comprehensive breadth across current events, polity, Indian history, geography, economy, and environmental ecology.
+              </p>
+
+              <!-- Live Countdown Banner for Sample Exam Date -->
+              <div class="stage-countdown-banner">
+                <div>
+                  <span style="font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--accent-crimson);">
+                    SAMPLE EXAM SCHEDULE (Simulated Target)
+                  </span>
+                  <div style="font-family: var(--font-sans); font-size: 0.85rem; color: var(--text-primary); font-weight: 600;">
+                    Target Date: May 24, 2026 (09:30 AM IST)
+                  </div>
+                </div>
+                <div>
+                  <span style="font-family: var(--font-sans); font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; display: block;">Time Remaining:</span>
+                  <div class="countdown-digits" id="prelims-countdown-ticker">225d : 12h : 14m : 02s</div>
+                </div>
+              </div>
+              
+              <div style="font-family: var(--font-sans); font-size: 0.68rem; color: var(--text-muted); font-style: italic;">
+                *Note: Sample simulated date for interface demonstration. Always verify official notifications at upsc.gov.in.
+              </div>
+            </div>
+          </div>
+
+          <!-- STAGE 2: MAINS -->
+          <div class="journey-stage-item">
+            <div class="stage-node-marker">2</div>
+            <div class="stage-card">
+              <div class="stage-header">
+                <div>
+                  <span class="badge badge-economy">Stage II • Written Gauntlet</span>
+                  <h3 class="stage-title">Civil Services Main Examination</h3>
+                </div>
+                <span style="font-family: var(--font-sans); font-size: 0.72rem; color: var(--text-muted);">9 Papers • 1750 Marks</span>
+              </div>
+              <p style="font-family: var(--font-body); font-size: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                The substantive test of intellectual depth, coherent expression, and balanced policy judgement. Demands rigorous multi-dimensional answer-writing synthesizing Essay, GS Papers I–IV, and your chosen Optional discipline.
+              </p>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.8rem;">
+                <span class="tag-pill">Essay (250M)</span>
+                <span class="tag-pill">GS I: Heritage & Society</span>
+                <span class="tag-pill">GS II: Governance & Constitution</span>
+                <span class="tag-pill">GS III: Technology & Economy</span>
+                <span class="tag-pill">GS IV: Ethics & Integrity</span>
+                <span class="tag-pill">Optional I & II (500M)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STAGE 3: INTERVIEW -->
+          <div class="journey-stage-item">
+            <div class="stage-node-marker">3</div>
+            <div class="stage-card">
+              <div class="stage-header">
+                <div>
+                  <span class="badge badge-environment">Stage III • Personality Assessment</span>
+                  <h3 class="stage-title">Personality Test (Board Interview)</h3>
+                </div>
+                <span style="font-family: var(--font-sans); font-size: 0.72rem; color: var(--text-muted);">Dholpur House, New Delhi • 275 Marks</span>
+              </div>
+              <p style="font-family: var(--font-body); font-size: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                An unhurried conversation with a board of competent and unbiased observers. Assesses mental alertness, critical powers of assimilation, clear and logical exposition, moral integrity, and administrative temperament.
+              </p>
+              <div style="margin-top: 0.8rem;">
+                <a href="#newspaper-section" class="btn btn-secondary btn-sm">Build Daily Editorial Perspective →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         LETTERS TO THE EDITOR (READER CORRESPONDENCE)
+         ======================================================================== -->
+    <section class="site-section letters-section" id="letters-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">Editorial Correspondence</span>
+          <h2 class="section-title">Letters to the Editor</h2>
+          <p class="section-subtitle">Reflections from aspirants utilizing the headline-to-question methodology across preparation hubs.</p>
+        </div>
+
+        <div class="letters-grid">
+          
+          <!-- Column of 3 Reader Letters -->
+          <div class="letters-column">
+            
+            <div class="reader-letter-card">
+              <p class="letter-quote">
+                "Turning the morning editorial directly into statement-based questions transformed my static notes. Instead of copying passive summaries, I now confront the editorial the way a paper-setter does."
+              </p>
+              <div class="letter-author-row">
+                <div class="author-avatar">AR</div>
+                <div class="author-meta">
+                  <h4>Aditi S. Rao</h4>
+                  <span>Mukherjee Nagar, New Delhi • Feature: Today's Paper MCQ Conversion</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="reader-letter-card">
+              <p class="letter-quote">
+                "The automatic logging of incorrect statements into the Mistake Notebook cured my habit of repeating silly factual traps. The 'Got it' review mechanic keeps revision honest."
+              </p>
+              <div class="letter-author-row">
+                <div class="author-avatar">KK</div>
+                <div class="author-meta">
+                  <h4>K. Karthikeyan</h4>
+                  <span>Anna Nagar, Chennai • Feature: Mistake Notebook Auto-Capture</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="reader-letter-card">
+              <p class="letter-quote">
+                "As a working aspirant, 15 focused minutes answering the daily 10-question press gave me consistent pacing without getting bogged down by 100-page monthly compendiums."
+              </p>
+              <div class="letter-author-row">
+                <div class="author-avatar">SM</div>
+                <div class="author-meta">
+                  <h4>Dr. Saurabh Mishra</h4>
+                  <span>Prayagraj, Uttar Pradesh • Feature: 15-Minute Mock Test Press</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Retention Cohort Chart (Illustrative Sample Data) -->
+          <div class="retention-chart-card">
+            <div>
+              <span class="section-label">Methodology Impact</span>
+              <h3 style="font-family: var(--font-display); font-size: 1.35rem; margin-top: 0.3rem;">30-Day Retention Delta</h3>
+              <p style="font-family: var(--font-body); font-size: 0.92rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                Comparative evaluation of passive editorial reading versus active headline question retrieval based on sample cohort research.
+              </p>
+
+              <div class="cohort-bars">
+                <div class="cohort-row">
+                  <div class="cohort-label">
+                    <span>Passive Editorial Reading (Control)</span>
+                    <strong>38%</strong>
+                  </div>
+                  <div class="cohort-track">
+                    <div class="cohort-fill-before"></div>
+                  </div>
+                </div>
+
+                <div class="cohort-row">
+                  <div class="cohort-label">
+                    <span>Active Headline-to-MCQ Practice (UPSC Zone)</span>
+                    <strong style="color: var(--accent-crimson);">74%</strong>
+                  </div>
+                  <div class="cohort-track">
+                    <div class="cohort-fill-after"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="font-family: var(--font-sans); font-size: 0.68rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 0.8rem;">
+              *Sample illustrative research metrics demonstrating the testing effect in cognitive retrieval. No verified commercial claims implied.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       EDITORIAL COLOPHON & FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div>
+          <span class="brand-title" style="font-size: 1.6rem;">UPSC ZONE <span>AI</span></span>
+          <p style="font-family: var(--font-body); font-size: 0.95rem; color: var(--text-secondary); margin: 0.75rem 0 1.25rem; max-width: 380px;">
+            Don't just read the paper. Answer it. Transforming the daily newspaper into an interactive UPSC Civil Services preparation experience.
+          </p>
+          <div style="font-family: var(--font-sans); font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">
+            Published Daily in New Delhi • Independent Academic Project
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Practice Modules</div>
+          <ul class="footer-links">
+            <li><a href="#newspaper-section" class="footer-link">Today's Paper Broadsheet</a></li>
+            <li><a href="#pyq-section" class="footer-link">PYQ Archive Bank</a></li>
+            <li><a href="#notebooks-section" class="footer-link">Clippings & Notes</a></li>
+            <li><a href="#ledger-section" class="footer-link">Progress Ledger</a></li>
+            <li><a href="#mocktest-section" class="footer-link">Mock Test Press</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Core Syllabi</div>
+          <ul class="footer-links">
+            <li><a href="#newspaper-section" class="footer-link">Polity & Governance (GS-II)</a></li>
+            <li><a href="#newspaper-section" class="footer-link">Economic Development (GS-III)</a></li>
+            <li><a href="#newspaper-section" class="footer-link">Ecology & Biodiversity (GS-III)</a></li>
+            <li><a href="#newspaper-section" class="footer-link">Ancient & Modern History (GS-I)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Get Tomorrow's Front Page</div>
+          <p style="font-family: var(--font-sans); font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+            Receive tomorrow morning's editorial headline questions delivered to your academic inbox at 05:00 IST.
+          </p>
+          <form class="footer-newsletter-form" id="newsletter-form">
+            <div class="footer-input-group">
+              <input type="email" id="newsletter-email" class="footer-input" placeholder="aspirant@university.edu" required>
+              <button type="submit" class="footer-submit-btn">Dispatch</button>
+            </div>
+            <span class="footer-notice">Demo-only simulation. Honest confirmation displayed without third-party email routing.</span>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 UPSC ZONE AI. All rights reserved. Academic Demonstration Platform.
+        </div>
+        <div style="max-width: 650px; text-align: right;">
+          Disclaimer: UPSC ZONE AI is an independent learning interface. Not affiliated with, endorsed by, or connected to the Union Public Service Commission (UPSC) or the Government of India.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       ACCESSIBLE STORY MCQ MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="story-mcq-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="section-label" style="margin-bottom: 0;">Editorial MCQ Examination</span>
+          <h3 class="modal-title" id="modal-mcq-title">Editorial Question</h3>
+        </div>
+        <button class="modal-close-btn" onclick="window.closeStoryMCQ()" aria-label="Close Modal">✕</button>
+      </div>
+      <div class="modal-content-scroll" id="modal-mcq-content">
+        <!-- Injected dynamically by js/newspaper.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="site-toast-container"></div>
+
+  <!-- ========================================================================
+       APPLICATION JAVASCRIPT MODULES
+       ======================================================================== -->
+  <script src="js/data.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/cds.js"></script>
+  <script src="js/newspaper.js"></script>
+  <script src="js/pyq.js"></script>
+  <script src="js/mocktest.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/journey.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

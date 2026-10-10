@@ -1,0 +1,286 @@
+/**
+ * UPSC ZONE AI - UPSC Journey Timeline & Letters to the Editor Styles
+ */
+
+/* ==========================================================================
+   UPSC JOURNEY (SCROLL-DRIVEN 3-STAGE TIMELINE)
+   ========================================================================== */
+.journey-section {
+  padding-top: clamp(3rem, 6vw, 6rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
+  background-color: var(--bg-secondary);
+  border-bottom: 2px solid var(--border-dark);
+  position: relative;
+}
+
+.journey-container {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Vertical Spine / Rail */
+.journey-rail {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 32px;
+  width: 4px;
+  background: var(--border-color);
+  z-index: 1;
+}
+
+.journey-rail-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--accent-crimson);
+  transition: height 0.3s ease;
+}
+
+/* Stage Cards */
+.journey-stage-item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 3.5rem;
+  z-index: 2;
+}
+
+.journey-stage-item:last-child {
+  margin-bottom: 0;
+}
+
+.stage-node-marker {
+  position: absolute;
+  left: 18px;
+  top: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 3px solid var(--border-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  box-shadow: 2px 2px 0px var(--border-dark);
+  transition: all 0.3s ease;
+}
+
+.journey-stage-item.active .stage-node-marker {
+  background: var(--accent-crimson);
+  border-color: var(--text-primary);
+  color: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(193, 18, 31, 0.25);
+  transform: scale(1.1);
+}
+
+.stage-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-hard);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.journey-stage-item.active .stage-card {
+  border-left: 6px solid var(--accent-crimson);
+  box-shadow: 6px 6px 0px var(--border-dark);
+}
+
+.stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.stage-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  color: var(--text-primary);
+}
+
+.stage-countdown-banner {
+  background: var(--bg-secondary);
+  border: 1px dashed var(--accent-crimson);
+  padding: 0.85rem 1.25rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.countdown-digits {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--accent-crimson);
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   LETTERS TO THE EDITOR (READER CORRESPONDENCE)
+   ========================================================================== */
+.letters-section {
+  padding-top: clamp(3rem, 6vw, 6rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
+  background-color: var(--bg-primary);
+  border-bottom: 2px solid var(--border-dark);
+}
+
+.letters-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.letters-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.reader-letter-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-dark);
+  box-shadow: var(--shadow-hard);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.reader-letter-card::before {
+  content: '“';
+  position: absolute;
+  top: 6px;
+  right: 18px;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--border-color);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.letter-quote {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.letter-author-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.75rem;
+}
+
+.author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-crimson);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.author-meta h4 {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.author-meta span {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Illustrative Retention Cohort Chart */
+.retention-chart-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-hard);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cohort-bars {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cohort-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cohort-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.cohort-track {
+  height: 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.cohort-fill-before {
+  width: 38%;
+  height: 100%;
+  background: var(--text-muted);
+}
+
+.cohort-fill-after {
+  width: 74%;
+  height: 100%;
+  background: var(--accent-crimson);
+}
+
+@media (max-width: 900px) {
+  .letters-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .journey-stage-item {
+    padding-left: 60px;
+  }
+  .stage-node-marker {
+    left: 8px;
+    width: 26px;
+    height: 26px;
+    font-size: 0.75rem;
+  }
+  .journey-rail {
+    left: 20px;
+  }
+}

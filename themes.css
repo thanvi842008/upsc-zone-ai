@@ -1,0 +1,257 @@
+/**
+ * UPSC ZONE AI - Theme System (Normal Mode & Midnight Study Mode)
+ * Normal Mode is DEFAULT.
+ */
+
+:root {
+  /* Normal Mode Colors (Default) */
+  --bg-primary: #FFF6E8;         /* Warm Ivory */
+  --bg-secondary: #F6EDE0;       /* Slightly deeper parchment */
+  --bg-card: #FFFAF2;            /* Lightest warm card surface */
+  --bg-paper: #F8EFE0;           /* Newsprint cream */
+  --bg-contrast: #181514;        /* Editorial charcoal */
+  
+  --accent-crimson: #C1121F;     /* Crimson Climax */
+  --accent-crimson-hover: #9E0E19;
+  --accent-blue: #A9C6EA;        /* Powder Blue */
+  --accent-blue-deep: #416B9E;   /* Readable Blue for text/borders */
+  --accent-gold: #D4A373;        /* Warm ochre */
+
+  --text-primary: #181514;       /* Near black charcoal */
+  --text-secondary: #4A433F;     /* Muted dark ink */
+  --text-muted: #7A726C;         /* Stamp grey */
+  --text-inverse: #FFF6E8;       /* Ivory text on dark elements */
+
+  --border-color: #D9CBB6;       /* Restrained warm beige */
+  --border-dark: #181514;        /* Solid editorial rule */
+  --border-crimson: #C1121F;
+  
+  --shadow-hard: 4px 4px 0px #181514;
+  --shadow-hard-lg: 8px 8px 0px #181514;
+  --shadow-crimson: 4px 4px 0px #C1121F;
+  --shadow-cd: 0 15px 35px rgba(24, 21, 20, 0.25), 0 3px 10px rgba(24, 21, 20, 0.15);
+
+  --badge-bg: #EAE0D0;
+  --badge-text: #181514;
+
+  --theme-transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Midnight Study Mode Theme Variables */
+[data-theme="midnight"] {
+  --bg-primary: #150F10;         /* Deep Obsidian Burgundy */
+  --bg-secondary: #1F1517;       /* Dark wine surface */
+  --bg-card: #281A1D;            /* Burgundy-brown card surface */
+  --bg-paper: #221517;           /* Dark newsprint */
+  --bg-contrast: #EDE1C8;        /* Warm Cream contrast */
+
+  --accent-crimson: #8C222E;     /* Deep Burgundy Accent */
+  --accent-crimson-hover: #A62937;
+  --accent-blue: #C8874A;        /* Aged Copper replaces powder blue for dark warmth */
+  --accent-blue-deep: #DE9B5E;
+  --accent-gold: #C8874A;        /* Warm Copper */
+
+  --text-primary: #EDE1C8;       /* Warm Cream */
+  --text-secondary: #D4C3A3;     /* Aged Parchment */
+  --text-muted: #9E8C78;         /* Muted sand */
+  --text-inverse: #150F10;       /* Dark text on light elements */
+
+  --border-color: #45282D;       /* Subdued burgundy border */
+  --border-dark: #C8874A;        /* Copper highlight borders */
+  --border-crimson: #8C222E;
+
+  --shadow-hard: 4px 4px 0px #000000;
+  --shadow-hard-lg: 8px 8px 0px #000000;
+  --shadow-crimson: 4px 4px 0px #8C222E;
+  --shadow-cd: 0 15px 35px rgba(0, 0, 0, 0.65), 0 4px 15px rgba(200, 135, 74, 0.15);
+
+  --badge-bg: #301F22;
+  --badge-text: #EDE1C8;
+}
+
+/* Theme Toggle Button in Navigation */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-dark);
+  color: var(--text-primary);
+  padding: 0.45rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px var(--border-dark);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.theme-toggle-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--border-dark);
+}
+
+.theme-toggle-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--border-dark);
+}
+
+.theme-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+[data-theme="normal"] .theme-icon {
+  background: #F7D070;
+  box-shadow: 0 0 0 2px rgba(247, 208, 112, 0.2);
+}
+
+[data-theme="midnight"] .theme-icon {
+  background: #C8874A;
+  box-shadow: -2px 0 0 0 #150F10 inset;
+}
+
+/* ==========================================================================
+   UPSC PRELIMS COUNTDOWN CHIP (NAVBAR)
+   Editorial Newspaper Design, Serif Typography, Dual-Theme Adaptation
+   ========================================================================== */
+.prelims-countdown-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.75rem;
+  background-color: #FFF6E8;
+  border: 1.5px solid var(--border-dark);
+  color: var(--text-primary);
+  font-family: var(--font-masthead);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 0px var(--border-dark);
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.prelims-countdown-chip:hover {
+  border-color: #C1121F;
+  box-shadow: 2px 2px 0px #C1121F;
+}
+
+.prelims-countdown-chip:focus-visible {
+  outline: 2px solid #A9C6EA;
+  outline-offset: 2px;
+}
+
+.countdown-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #C1121F;
+  box-shadow: 0 0 0 2px rgba(193, 18, 31, 0.25);
+  display: inline-block;
+  flex-shrink: 0;
+  animation: countdown-dot-pulse 2s infinite ease-in-out;
+}
+
+@keyframes countdown-dot-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+.countdown-text {
+  display: inline-block;
+  line-height: 1;
+}
+
+.countdown-text strong {
+  font-family: var(--font-masthead);
+  font-weight: 800;
+  color: #C1121F;
+}
+
+/* Midnight Mode Adaptation */
+[data-theme="midnight"] .prelims-countdown-chip {
+  background-color: #30201E;
+  border-color: #C8874A;
+  color: #EDE1C8;
+  box-shadow: 2px 2px 0px #681D27;
+}
+
+[data-theme="midnight"] .prelims-countdown-chip:hover {
+  border-color: #EDE1C8;
+  box-shadow: 2px 2px 0px #C8874A;
+}
+
+[data-theme="midnight"] .prelims-countdown-chip:focus-visible {
+  outline: 2px solid #C8874A;
+  outline-offset: 2px;
+}
+
+[data-theme="midnight"] .countdown-pulse-dot {
+  background-color: #C8874A;
+  box-shadow: 0 0 0 2px rgba(200, 135, 74, 0.35);
+}
+
+[data-theme="midnight"] .countdown-text strong {
+  color: #C8874A;
+}
+
+/* Responsive Placement: Desktop vs Mobile Collapsed Menu */
+.prelims-countdown-chip.desktop-chip {
+  display: inline-flex;
+}
+
+.nav-mobile-countdown-item {
+  display: none;
+}
+
+@media (min-width: 769px) and (max-width: 1180px) {
+  .prelims-countdown-chip.desktop-chip {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.67rem;
+    gap: 0.35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .prelims-countdown-chip.desktop-chip {
+    display: none;
+  }
+
+  .nav-mobile-countdown-item {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--border-color);
+  }
+
+  .nav-mobile-countdown-item .prelims-countdown-chip {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.75rem;
+  }
+}
+

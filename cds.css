@@ -1,0 +1,263 @@
+/**
+ * UPSC ZONE AI - Signature Interactive CDs
+ * CSS 3D Transforms, Pointer-based Tilt, Click-to-Spin, Active Drawer
+ */
+
+.cds-section {
+  padding-top: clamp(3rem, 5vw, 5rem);
+  padding-bottom: clamp(3rem, 5vw, 5rem);
+  background-color: var(--bg-secondary);
+  border-bottom: 2px solid var(--border-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.cds-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.cds-instruction-badge {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  border: 1px dashed var(--border-color);
+  padding: 0.4rem 0.8rem;
+  background: var(--bg-card);
+}
+
+/* CD Category Navigation Stage - Clean, Balanced, Predictable */
+.cds-stage-wrapper {
+  width: 100%;
+  margin: 0 auto 2.5rem;
+}
+
+.cds-stage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: stretch;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+/* Individual Physical Disc Item - Direct Navigation Card */
+.cd-disc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 230px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  transition: opacity 0.15s ease;
+}
+
+.cd-disc-card:focus-visible {
+  outline: 2px solid var(--accent-crimson);
+  outline-offset: 4px;
+}
+
+/* Physical CD Body */
+.cd-inner-disc {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #EAE0D0;
+  border: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-hard);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover and Focus - Simple Predictable Border Highlight */
+.cd-disc-card:hover .cd-inner-disc,
+.cd-disc-card:focus-visible .cd-inner-disc {
+  border-color: var(--accent-crimson);
+  box-shadow: 0 0 0 3px var(--accent-crimson);
+}
+
+/* Active State */
+.cd-disc-card.active .cd-inner-disc {
+  border-color: var(--accent-crimson);
+  box-shadow: 0 0 0 4px var(--accent-crimson);
+}
+
+/* High-res Disc Artwork Image */
+.cd-artwork-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  pointer-events: none;
+}
+
+/* Center hole is authentically preserved within the high-resolution artwork */
+.cd-center-hole {
+  display: none;
+}
+
+/* Category Label directly under disc */
+.cd-tag-label {
+  margin-top: 1rem;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-dark);
+  padding: 0.4rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  box-shadow: 2px 2px 0px var(--border-dark);
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  pointer-events: none;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.cd-disc-card:hover .cd-tag-label,
+.cd-disc-card:focus-visible .cd-tag-label {
+  border-color: var(--accent-crimson);
+  color: var(--accent-crimson);
+}
+
+.cd-disc-card.active .cd-tag-label {
+  background: var(--accent-crimson);
+  color: #FFFFFF;
+  border-color: var(--accent-crimson);
+}
+
+/* Working Category Drawer Panel Below Discs */
+.cd-active-drawer {
+  background: var(--bg-card);
+  border: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-hard-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  transition: var(--theme-transition);
+}
+
+.drawer-disc-preview {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-hard);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.drawer-disc-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.drawer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.drawer-category-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-crimson);
+}
+
+.drawer-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  color: var(--text-primary);
+  line-height: 1.15;
+}
+
+.drawer-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+}
+
+.drawer-stats {
+  display: flex;
+  gap: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+.drawer-stats strong {
+  color: var(--text-primary);
+}
+
+.drawer-action .btn {
+  white-space: nowrap;
+}
+
+/* Responsive Arrangement for Mobile (Reflow to 2x2 grid, zero collision, zero transforms) */
+@media (max-width: 860px) {
+  .cds-stage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.25rem;
+    min-height: auto;
+    padding: 1rem 0 1.5rem;
+  }
+
+  .cd-disc-card {
+    max-width: 180px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .cd-active-drawer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    gap: 1.5rem;
+  }
+
+  .drawer-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .drawer-action {
+    width: 100%;
+  }
+
+  .drawer-action .btn {
+    width: 100%;
+  }
+}

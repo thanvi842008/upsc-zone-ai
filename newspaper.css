@@ -1,0 +1,328 @@
+/**
+ * UPSC ZONE AI - Today's Paper (The Vintage Newspaper Experience)
+ * STRICT RULE: Distressed, aged, folded paper texture applies ONLY to this section.
+ */
+
+.newspaper-section {
+  padding-top: clamp(3rem, 6vw, 6rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
+  background-color: var(--bg-primary);
+  border-bottom: 2px solid var(--border-dark);
+  position: relative;
+}
+
+/* Distressed Vintage Paper Sheet (Confined strictly to Today's Paper) */
+.newspaper-sheet {
+  background-color: #F7EFE1;
+  color: #1A1615;
+  border: 2px solid #1A1615;
+  box-shadow: 
+    6px 6px 0px #1A1615,
+    0 15px 35px rgba(26, 22, 21, 0.15);
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  position: relative;
+  overflow: hidden;
+  transition: var(--theme-transition);
+}
+
+[data-theme="midnight"] .newspaper-sheet {
+  background-color: #241618;
+  color: #EDE1C8;
+  border-color: #C8874A;
+  box-shadow: 6px 6px 0px #000000, 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Aged Paper Grain & Crease Simulation (Pure CSS texture) */
+.newspaper-sheet::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+    radial-gradient(circle at 50% 30%, rgba(200, 150, 100, 0.08) 0%, transparent 60%);
+  background-size: 20px 20px, 20px 20px, 100% 100%;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Vintage Horizontal Fold Line across the broadsheet */
+.newspaper-fold-line {
+  position: absolute;
+  top: 48%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.12) 20%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.12) 80%, transparent 100%);
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* NEWSPAPER MASTHEAD */
+.newspaper-masthead {
+  text-align: center;
+  border-bottom: 3px double #1A1615;
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 6;
+}
+
+[data-theme="midnight"] .newspaper-masthead {
+  border-bottom-color: #C8874A;
+}
+
+.masthead-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(26, 22, 21, 0.25);
+  margin-bottom: 1rem;
+}
+
+[data-theme="midnight"] .masthead-meta-top {
+  border-bottom-color: rgba(200, 135, 74, 0.3);
+  color: #D4C3A3;
+}
+
+.masthead-title {
+  font-family: var(--font-masthead);
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+
+.masthead-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  font-style: italic;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+.masthead-meta-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(26, 22, 21, 0.25);
+  margin-top: 0.8rem;
+}
+
+/* Sample Content Stamp */
+.sample-content-watermark {
+  display: inline-block;
+  background: var(--accent-crimson);
+  color: #FFFFFF;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+/* LEAD STORY (The Primary Article) */
+.lead-story-card {
+  border-bottom: 2px solid #1A1615;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 6;
+}
+
+[data-theme="midnight"] .lead-story-card {
+  border-bottom-color: #C8874A;
+}
+
+.story-meta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.lead-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.8vw, 2.9rem);
+  line-height: 1.15;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.lead-headline:hover {
+  color: var(--accent-crimson);
+}
+
+.lead-subhead {
+  font-family: var(--font-body);
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.lead-body-columns {
+  column-count: 2;
+  column-gap: 2.5rem;
+  column-rule: 1px solid rgba(26, 22, 21, 0.2);
+  text-align: justify;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+[data-theme="midnight"] .lead-body-columns {
+  column-rule-color: rgba(200, 135, 74, 0.25);
+}
+
+.lead-body-columns p:first-child::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.6rem;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.6rem;
+  padding-top: 4px;
+  color: var(--accent-crimson);
+}
+
+.story-action-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(26, 22, 21, 0.2);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+[data-theme="midnight"] .story-action-strip {
+  border-top-color: rgba(200, 135, 74, 0.25);
+}
+
+.story-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.tag-pill {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid rgba(26, 22, 21, 0.3);
+  text-transform: uppercase;
+}
+
+[data-theme="midnight"] .tag-pill {
+  border-color: rgba(200, 135, 74, 0.3);
+}
+
+.story-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* SECONDARY STORIES GRID */
+.newspaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 6;
+}
+
+.secondary-story-card {
+  border-top: 1px solid #1A1615;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+[data-theme="midnight"] .secondary-story-card {
+  border-top-color: #C8874A;
+}
+
+.secondary-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+  line-height: 1.25;
+  margin: 0.5rem 0 0.6rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.secondary-headline:hover {
+  color: var(--accent-crimson);
+}
+
+.secondary-summary {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+/* Clipped State Styling */
+.btn-clipped {
+  background: var(--text-primary) !important;
+  color: var(--bg-primary) !important;
+  border-color: var(--text-primary) !important;
+}
+
+/* Responsiveness for Today's Paper */
+@media (max-width: 992px) {
+  .newspaper-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lead-body-columns {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .newspaper-grid {
+    grid-template-columns: 1fr;
+  }
+  .masthead-meta-top, .masthead-meta-bottom {
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+  .story-action-strip {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .story-buttons {
+    width: 100%;
+    justify-content: stretch;
+  }
+  .story-buttons .btn {
+    flex: 1;
+  }
+}

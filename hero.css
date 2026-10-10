@@ -1,0 +1,236 @@
+/**
+ * UPSC ZONE AI - Hero Section Styles
+ * Two-Column Editorial Composition with Uploaded Hero Artwork
+ */
+
+.hero-section {
+  padding-top: clamp(2.5rem, 5vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
+  border-bottom: 2px solid var(--border-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle newspaper explosion background fragments (pure CSS, restrained) */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(169, 198, 234, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  position: relative;
+  z-index: 1;
+}
+
+/* LEFT COLUMN: Editorial Text */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-label-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-dark);
+  padding: 0.35rem 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  box-shadow: 2px 2px 0px var(--border-dark);
+}
+
+.hero-label-badge .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-crimson);
+  display: inline-block;
+}
+
+/* Large Bold Hero Headline with Climax Line Break */
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+  line-height: 1.06;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.hero-headline .headline-climax {
+  display: block;
+  color: var(--accent-crimson);
+  font-style: italic;
+  letter-spacing: -0.01em;
+  position: relative;
+}
+
+.hero-supporting {
+  font-family: var(--font-body);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin-bottom: 0.85rem;
+}
+
+.hero-description {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 580px;
+  margin-bottom: 2.2rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.hero-meta-strip {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.meta-item strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* RIGHT COLUMN: Museum-Grade Uploaded Collage Presentation */
+.hero-visual-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-art-frame {
+  position: relative;
+  background: var(--bg-card);
+  border: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-hard-lg);
+  padding: 0.75rem;
+  width: 100%;
+  max-width: 480px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-art-frame:hover {
+  transform: translateY(-3px);
+  box-shadow: 10px 10px 0px var(--border-dark);
+}
+
+.hero-art-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1024 / 882;
+  object-fit: contain;
+  display: block;
+  border: 1px solid var(--border-color);
+  background: #2D3E4E; /* matches blue-grey collage ground */
+}
+
+/* Frame Editorial Labels */
+.art-caption-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.65rem;
+  margin-top: 0.25rem;
+  border-top: 1px solid var(--border-color);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.art-caption-strip .plate-number {
+  color: var(--accent-crimson);
+}
+
+/* Paper clip decorative accent */
+.paper-clip-tag {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: var(--accent-crimson);
+  color: #FFFFFF;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-dark);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+}
+
+/* Mobile Hero Layout (Stack without collision) */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-content {
+    align-items: flex-start;
+  }
+
+  .hero-visual-wrapper {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}

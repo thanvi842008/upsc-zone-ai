@@ -1,0 +1,207 @@
+/**
+ * UPSC ZONE AI - Mock Test Press Styles
+ * Timed 10-question test engine with sequential navigation & review grid
+ */
+
+.mocktest-section {
+  padding-top: clamp(3rem, 6vw, 6rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
+  background-color: var(--bg-primary);
+  border-bottom: 2px solid var(--border-dark);
+}
+
+.mocktest-container {
+  background: var(--bg-card);
+  border: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-hard-lg);
+  padding: clamp(1.5rem, 3.5vw, 3rem);
+  position: relative;
+  min-height: 480px;
+}
+
+/* INITIAL START SCREEN */
+.mocktest-start-screen {
+  text-align: center;
+  max-width: 680px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.mocktest-features-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.feature-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 1rem 0.5rem;
+  font-family: var(--font-sans);
+}
+
+.feature-box strong {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--accent-crimson);
+  margin-bottom: 0.2rem;
+}
+
+.feature-box span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ACTIVE TEST INTERFACE */
+.mocktest-active-interface {
+  display: none;
+}
+
+.mocktest-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-dark);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.timer-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-dark);
+  box-shadow: 2px 2px 0px var(--border-dark);
+}
+
+.timer-display.warning {
+  color: var(--accent-crimson);
+  border-color: var(--accent-crimson);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Question Palette (1 to 10 bubbles) */
+.question-palette {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.palette-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-dark);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.palette-btn.current {
+  border-color: var(--accent-crimson);
+  background: var(--accent-crimson);
+  color: #FFFFFF;
+  box-shadow: 0 0 0 2px var(--bg-card), 0 0 0 4px var(--accent-crimson);
+}
+
+.palette-btn.answered {
+  background: #137333;
+  color: #FFFFFF;
+  border-color: #137333;
+}
+
+[data-theme="midnight"] .palette-btn.answered {
+  background: #2F855A;
+  border-color: #2F855A;
+}
+
+/* Question Content Area */
+.mock-question-display {
+  min-height: 240px;
+}
+
+.mock-controls-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--border-dark);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* RESULTS & SCORECARD SCREEN */
+.mocktest-results-screen {
+  display: none;
+  text-align: center;
+}
+
+.results-hero-card {
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-dark);
+  box-shadow: var(--shadow-hard-lg);
+  padding: 2.5rem 2rem;
+}
+
+.score-big-number {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1;
+  color: var(--accent-crimson);
+  margin: 0.5rem 0 0.2rem;
+}
+
+.results-breakdown-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.review-questions-list {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .mocktest-features-list {
+    grid-template-columns: 1fr;
+  }
+  .results-breakdown-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
